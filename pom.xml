@@ -15,7 +15,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<name>grpc-sample-definition</name>
-	<description>gRPCS Definition</description>
+	<description>gRPCS Sample Definition</description>
 
 	<properties>
 		<java.version>17</java.version>
@@ -59,8 +59,8 @@
                 <artifactId>protobuf-maven-plugin</artifactId>
                 <version>${protobuf-plugin.version}</version>
                 <configuration>
+                	<pluginId>grpc-java</pluginId>
                     <protocArtifact>com.google.protobuf:protoc:${protobuf.version}:exe:${os.detected.classifier}</protocArtifact>
-                    <pluginId>grpc-java</pluginId>
                     <pluginArtifact>io.grpc:protoc-gen-grpc-java:${grpc.version}:exe:${os.detected.classifier}</pluginArtifact>
                 </configuration>
                 <executions>
